@@ -19,12 +19,12 @@ var REGISTER_URL = 'https://register.bomal.org/';
    empty: no words are put in a speaker's mouth until BOMAL supplies
    them. See content-gaps.md. */
 var SPEAKERS = {
-  givens:  { name: 'Terryl Givens',       role: 'Senior Research Fellow, Neal A. Maxwell Institute', img: 'givens.webp',  quote: '' },
-  welch:   { name: 'Rosalynde F. Welch',  role: 'Associate Director, Neal A. Maxwell Institute',     img: 'welch.webp',   quote: '' },
-  wilcox:  { name: 'Bradley R. Wilcox',   role: 'Professor of Ancient Scripture, BYU',               img: 'wilcox.webp',  quote: '' },
-  rane:    { name: 'Walter Rane',         role: 'Painter, honored Saturday afternoon',               img: 'rane.webp',    quote: '' },
-  pelo:    { name: 'Brad Pelo',           role: 'President, The Chosen',                             img: 'pelo.webp',    quote: '' },
-  johnson: { name: 'Jane Clayson Johnson',role: 'Journalist and author',                             img: 'johnson.webp', quote: '' }
+  givens:  { name: 'Terryl Givens',       role: 'Senior Research Fellow, Neal A. Maxwell Institute', img: 'givens.webp',  quote: '', billing: 'Keynote speaker' },
+  welch:   { name: 'Rosalynde F. Welch',  role: 'Associate Director, Neal A. Maxwell Institute',     img: 'welch.webp',   quote: '', billing: 'Keynote speaker' },
+  wilcox:  { name: 'Bradley R. Wilcox',   role: 'Professor of Ancient Scripture, BYU',               img: 'wilcox.webp',  quote: '', billing: 'Keynote speaker' },
+  rane:    { name: 'Walter Rane',         role: 'Painter, honored Saturday afternoon',               img: 'rane.webp',    quote: '', billing: 'On the program' },
+  pelo:    { name: 'Brad Pelo',           role: 'President, The Chosen',                             img: 'pelo.webp',    quote: '', billing: 'On the program' },
+  johnson: { name: 'Jane Clayson Johnson',role: 'Journalist and author',                             img: 'johnson.webp', quote: '', billing: 'On the program' }
 };
 
 (function () {
@@ -50,6 +50,9 @@ var SPEAKERS = {
   if (speaker) {
     document.querySelectorAll('[data-sp="name"]').forEach(function (el) { el.textContent = speaker.name; });
     document.querySelectorAll('[data-sp="role"]').forEach(function (el) { el.textContent = speaker.role; });
+    document.querySelectorAll('[data-sp="billing"]').forEach(function (el) {
+      el.textContent = (speaker.billing || 'On the program') + ' at the Book of Mormon Culture Conference';
+    });
     document.querySelectorAll('[data-sp="img"]').forEach(function (el) {
       el.src = assetBase + 'speakers/' + speaker.img;
       el.alt = speaker.name;
