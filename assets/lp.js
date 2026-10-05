@@ -93,7 +93,7 @@ var SPEAKERS = {
     } else {
       live = false;
       document.querySelectorAll('[data-urgency]').forEach(function (el) {
-        el.innerHTML = '<b>November 6 and 7</b> at the Provo Marriott. The banquet and the box lunch are already sold out.';
+        el.innerHTML = '<b>November 6 and 7</b> at the Provo Marriott. Banquet and box lunch tickets are available while they last.';
       });
       document.querySelectorAll('[data-price-now]').forEach(function (el) { el.textContent = '$30'; });
       document.querySelectorAll('[data-price-was]').forEach(function (el) { el.hidden = true; });
