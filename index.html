@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" data-asset-base="brand_assets/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Landing page options | Book of Mormon Culture Conference</title>
+<meta name="description" content="Four landing page templates built to convert paid social traffic into conference registrations. Review and pick a direction.">
+<link rel="icon" href="brand_assets/logo-icon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lato:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/brand.css">
+<style>
+  /* ---- The chooser. Internal review page, not an ad destination. ---- */
+  body{ padding-bottom:0; }
+
+  .topbar{ padding-block:var(--s4); border-bottom:1px solid var(--line); }
+  .topbar .wrap{ display:flex; align-items:center; justify-content:space-between; gap:var(--s3); flex-wrap:wrap; }
+  .topbar img{ height:68px; width:auto; display:block; }
+  .topbar .tag{ font-size:.9375rem; font-weight:700; color:var(--ink-soft); text-align:right; line-height:1.4; }
+
+  .intro{ padding-block:var(--s7) var(--s6); }
+  .intro h1{ max-width:19ch; }
+  .intro .lede{ margin-top:var(--s4); }
+
+  /* The four cards */
+  .options{ display:grid; gap:var(--s5); }
+  @media (min-width:820px){ .options{ grid-template-columns:repeat(2,1fr); gap:var(--s5); } }
+
+  .opt{ display:flex; flex-direction:column; background:var(--card); border:1px solid var(--line);
+    border-radius:var(--rad-xl); box-shadow:var(--sh-1); overflow:hidden;
+    transition:transform .3s var(--ease), box-shadow .3s var(--ease); }
+  .opt:hover{ transform:translateY(-4px); box-shadow:var(--sh-3); }
+
+  .opt-top{ padding:var(--s5) var(--s5) var(--s4); border-bottom:1px solid var(--line-soft); }
+  .opt-letter{ display:inline-flex; align-items:center; justify-content:center;
+    width:38px; height:38px; border-radius:50%; background:var(--green); color:#fff;
+    font-family:'Libre Baskerville',Georgia,serif; font-weight:700; font-size:1.1rem;
+    letter-spacing:0; margin-bottom:var(--s3); }
+  .opt-top h2{ font-size:1.5rem; margin-bottom:var(--s2); }
+  .opt-top .what{ font-size:1rem; color:var(--ink-soft); line-height:1.65; }
+
+  .opt-body{ padding:var(--s5); flex:1; display:flex; flex-direction:column; gap:var(--s4); }
+  .opt-row b{ display:block; font-size:.875rem; font-weight:900; margin-bottom:.3rem; }
+  .opt-row p{ font-size:.9375rem; color:var(--ink-soft); line-height:1.65; }
+  .opt-structure{ list-style:none; margin:0; padding:0; font-size:.875rem; color:var(--ink-soft); line-height:1.5; }
+  .opt-structure li{ display:flex; gap:.55rem; }
+  .opt-structure li + li{ margin-top:.4rem; }
+  .opt-structure .n{ flex:none; width:1.3rem; font-weight:900; color:var(--tan); }
+
+  .opt-foot{ margin-top:auto; padding:var(--s4) var(--s5) var(--s5); display:flex; flex-wrap:wrap; gap:var(--s2); }
+
+  /* Shared mechanics */
+  .mech{ display:grid; gap:var(--s5); }
+  @media (min-width:800px){ .mech{ grid-template-columns:repeat(3,1fr); } }
+  .mech h3{ margin-bottom:var(--s2); }
+  .mech p{ font-size:.9375rem; color:var(--ink-soft); line-height:1.65; }
+  .mech code{ font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.8125rem;
+    background:rgba(133,120,74,.14); padding:.12rem .4rem; border-radius:4px; }
+
+  /* Speaker test links */
+  .testlinks{ display:flex; flex-wrap:wrap; gap:var(--s2); }
+  .testlink{ font-size:.875rem; font-weight:700; text-decoration:none; color:var(--green-deep);
+    border:1px solid var(--line); border-radius:999px; padding:.4rem .9rem; background:var(--card);
+    transition:border-color .2s var(--ease), background-color .2s var(--ease), transform .2s var(--ease); }
+  .testlink:hover{ border-color:var(--olive); background:rgba(125,151,94,.1); transform:translateY(-1px); }
+  .testlink:focus-visible{ outline:3px solid var(--bark); outline-offset:2px; }
+
+  .note{ border-left:3px solid var(--brown); padding-left:var(--s4); }
+  .note p + p{ margin-top:var(--s3); }
+  .note b{ font-weight:900; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <img src="brand_assets/logo-full.webp" alt="Book of Mormon Arts &amp; Letters Foundation">
+    <p class="tag">Landing page options<br>Culture Conference, November 2026</p>
+  </div>
+</header>
+
+<main>
+  <section class="intro grain">
+    <div class="wrap">
+      <h1>Four landing pages, four different conversion arguments.</h1>
+      <p class="lede measure">
+        Each one takes the same event, the same brand and the same facts, and builds a different
+        case for registering. They differ in structure and in the objection they are designed to
+        beat, not in decoration. Open them side by side and pick the argument that fits the
+        traffic you are buying.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="options">
+
+        <!-- A -->
+        <article class="opt">
+          <div class="opt-top">
+            <p class="opt-letter">A</p>
+            <h2>Direct response</h2>
+            <p class="what">
+              The shortest path from ad click to registration. One screen, one decision, no
+              detours. Everything a visitor needs to say yes is above the fold.
+            </p>
+          </div>
+          <div class="opt-body">
+            <div class="opt-row">
+              <b>Best for</b>
+              <p>Warm traffic. People who already know the speaker and mostly need the date,
+                 the price and a button.</p>
+            </div>
+            <div class="opt-row">
+              <b>The objection it beats</b>
+              <p>Friction. Nobody abandons because they could not find the information.</p>
+            </div>
+            <div class="opt-row">
+              <b>Structure</b>
+              <ul class="opt-structure">
+                <li><span class="n">1</span><span>Hero with speaker portrait and the single CTA</span></li>
+                <li><span class="n">2</span><span>Four-fact strip: when, where, price, format</span></li>
+                <li><span class="n">3</span><span>Speaker lineup</span></li>
+                <li><span class="n">4</span><span>Three objection answers</span></li>
+                <li><span class="n">5</span><span>Closing CTA band</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="opt-foot">
+            <a class="btn btn-primary" href="direct.html">Open option A</a>
+            <a class="btn btn-ghost" href="direct.html?s=givens">With Givens ad</a>
+          </div>
+        </article>
+
+        <!-- B -->
+        <article class="opt">
+          <div class="opt-top">
+            <p class="opt-letter">B</p>
+            <h2>Authority wall</h2>
+            <p class="what">
+              Leads with the people. Six portraits at full size before any sales copy, because
+              for this event the lineup is the product.
+            </p>
+          </div>
+          <div class="opt-body">
+            <div class="opt-row">
+              <b>Best for</b>
+              <p>Cold traffic that knows the speaker but has never heard of the foundation or
+                 the conference.</p>
+            </div>
+            <div class="opt-row">
+              <b>The objection it beats</b>
+              <p>Legitimacy. "Who is running this, and is it worth my Saturday?"</p>
+            </div>
+            <div class="opt-row">
+              <b>Structure</b>
+              <ul class="opt-structure">
+                <li><span class="n">1</span><span>Short centered hero, one CTA</span></li>
+                <li><span class="n">2</span><span>Six-portrait wall with roles and context</span></li>
+                <li><span class="n">3</span><span>The institutions behind them</span></li>
+                <li><span class="n">4</span><span>Walter Rane honoree spotlight</span></li>
+                <li><span class="n">5</span><span>Live podcast taping, then CTA band</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="opt-foot">
+            <a class="btn btn-primary" href="authority.html">Open option B</a>
+            <a class="btn btn-ghost" href="authority.html?s=welch">With Welch ad</a>
+          </div>
+        </article>
+
+        <!-- C -->
+        <article class="opt">
+          <div class="opt-top">
+            <p class="opt-letter">C</p>
+            <h2>Long-form story</h2>
+            <p class="what">
+              A narrative that builds the desire before it ever asks. Problem, agitation, turn,
+              offer, with the CTA repeated three times down the scroll.
+            </p>
+          </div>
+          <div class="opt-body">
+            <div class="opt-row">
+              <b>Best for</b>
+              <p>Low-awareness traffic. People who like the speaker's content but have never
+                 considered attending a conference about the Book of Mormon.</p>
+            </div>
+            <div class="opt-row">
+              <b>The objection it beats</b>
+              <p>Indifference. "Why would I care about this at all?"</p>
+            </div>
+            <div class="opt-row">
+              <b>Structure</b>
+              <ul class="opt-structure">
+                <li><span class="n">1</span><span>Headline hook, no hard sell</span></li>
+                <li><span class="n">2</span><span>Narrative in a real reading column</span></li>
+                <li><span class="n">3</span><span>Pull quotes that reset the eye</span></li>
+                <li><span class="n">4</span><span>Speakers as evidence, inline</span></li>
+                <li><span class="n">5</span><span>Four-question FAQ, then CTA band</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="opt-foot">
+            <a class="btn btn-primary" href="story.html">Open option C</a>
+            <a class="btn btn-ghost" href="story.html?s=wilcox">With Wilcox ad</a>
+          </div>
+        </article>
+
+        <!-- D -->
+        <article class="opt">
+          <div class="opt-top">
+            <p class="opt-letter">D</p>
+            <h2>Value stack</h2>
+            <p class="what">
+              Itemizes everything the registration includes, line by line, then shows the price
+              at the bottom so thirty dollars lands as a bargain rather than a cost.
+            </p>
+          </div>
+          <div class="opt-body">
+            <div class="opt-row">
+              <b>Best for</b>
+              <p>Price-sensitive or comparison-shopping traffic, and anyone who has to justify
+                 the trip to a spouse.</p>
+            </div>
+            <div class="opt-row">
+              <b>The objection it beats</b>
+              <p>Cost and uncertainty. "What do I actually get for this?"</p>
+            </div>
+            <div class="opt-row">
+              <b>Structure</b>
+              <ul class="opt-structure">
+                <li><span class="n">1</span><span>Hero with a sticky price panel</span></li>
+                <li><span class="n">2</span><span>Itemized stack, including the sold-out add-ons</span></li>
+                <li><span class="n">3</span><span>Two-day agenda</span></li>
+                <li><span class="n">4</span><span>Refund policy as risk reversal</span></li>
+                <li><span class="n">5</span><span>CTA band</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="opt-foot">
+            <a class="btn btn-primary" href="offer.html">Open option D</a>
+            <a class="btn btn-ghost" href="offer.html?s=pelo">With Pelo ad</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SHARED MECHANICS -->
+  <section class="section band-card">
+    <div class="wrap stack-5">
+      <div class="measure">
+        <h2>What all four share</h2>
+        <p class="lede" style="margin-top:var(--s3)">
+          The conversion mechanics are identical across every option, so a test between them
+          is a test of the argument and nothing else.
+        </p>
+      </div>
+      <div class="mech">
+        <div>
+          <h3>Speaker message-match</h3>
+          <p>
+            Add <code>?s=givens</code> to any page and the hero portrait, name and role swap to the
+            speaker whose ad was clicked, and that speaker drops out of the lineup grid below.
+            The page the visitor lands on looks like the ad they just saw.
+          </p>
+        </div>
+        <div>
+          <h3>Self-managing urgency</h3>
+          <p>
+            One date in <code>assets/lp.js</code> drives the top strip and every price on the page.
+            Before October 10 it counts down the early-bird discount. After it passes, the page
+            flips itself to the event date and the sold-out add-ons. No edit needed.
+          </p>
+        </div>
+        <div>
+          <h3>Clean handoff and tracking</h3>
+          <p>
+            Every CTA goes to register.bomal.org carrying its UTM parameters, plus the speaker key
+            as <code>utm_content</code>, so you can see which speaker's ad produced which
+            registration. No navigation links leak traffic off the page.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEST LINKS -->
+  <section class="section">
+    <div class="wrap stack-5">
+      <div class="measure">
+        <h2>Try the speaker swap</h2>
+        <p class="lede" style="margin-top:var(--s3)">
+          These open option A as six different ad audiences would see it. The same parameter works
+          on all four pages.
+        </p>
+      </div>
+      <div class="testlinks">
+        <a class="testlink" href="direct.html?s=givens">Terryl Givens</a>
+        <a class="testlink" href="direct.html?s=welch">Rosalynde F. Welch</a>
+        <a class="testlink" href="direct.html?s=wilcox">Bradley R. Wilcox</a>
+        <a class="testlink" href="direct.html?s=rane">Walter Rane</a>
+        <a class="testlink" href="direct.html?s=pelo">Brad Pelo</a>
+        <a class="testlink" href="direct.html?s=johnson">Jane Clayson Johnson</a>
+        <a class="testlink" href="direct.html">No speaker, generic</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTES -->
+  <section class="section band-paper grain">
+    <div class="wrap-narrow">
+      <div class="note">
+        <h2 style="margin-bottom:var(--s3)">Before these go live</h2>
+        <p>
+          <b>Speaker quotes are empty on purpose.</b> Nothing on these pages puts words in a
+          speaker's mouth. If BOMAL supplies a line from each speaker, the quote slot is already
+          wired into <code style="font-family:ui-monospace,monospace;font-size:.85em">assets/lp.js</code>.
+        </p>
+        <p>
+          <b>Only six speakers have portraits.</b> Those are the six published on bomal.org. Any
+          other speaker running ads needs a headshot before their swap will work.
+        </p>
+        <p>
+          <b>The event photos are real and now carry the social proof.</b> Five shots from a
+          previous conference, resized from roughly forty megabytes down to under a megabyte
+          total so the pages still load fast on a phone over cell data. What is still missing is
+          written proof: attendee quotes, last year's attendance, and how many years this has run.
+        </p>
+        <p>
+          <b>Every fact here came from bomal.org and register.bomal.org</b> on October 5, 2026:
+          the dates, the venue, the thirty dollar price, the five dollar early-bird, the sold-out
+          banquet and lunch, and the refund terms. Confirm them before spend goes live.
+        </p>
+        <p>
+          <b>No agency credit is in these footers yet.</b> BOMAL is in Provo, so the footer credit
+          would be Atlas rather than Cedar City Marketing. Say the word and it goes in.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="sitefoot">
+  <div class="wrap center stack-2">
+    <p>Book of Mormon Arts &amp; Letters Foundation, Inc. A 501(c)(3) nonprofit.</p>
+    <p>Internal review page. Not linked from the live site.</p>
+  </div>
+</footer>
+
+</body>
+</html>
