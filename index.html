@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Landing page options | Book of Mormon Culture Conference</title>
-<meta name="description" content="Four landing page templates built to convert paid social traffic into conference registrations. Review and pick a direction.">
+<meta name="description" content="Three landing page templates built to convert paid social traffic into conference registrations. Review and pick a direction.">
 <link rel="icon" href="brand_assets/logo-icon.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,9 +23,12 @@
   .intro h1{ max-width:19ch; }
   .intro .lede{ margin-top:var(--s4); }
 
-  /* The four cards */
+  /* The three cards */
   .options{ display:grid; gap:var(--s5); }
-  @media (min-width:820px){ .options{ grid-template-columns:repeat(2,1fr); gap:var(--s5); } }
+  @media (min-width:760px) and (max-width:1039px){ .options{ grid-template-columns:repeat(2,1fr); } }
+  @media (min-width:1040px){ .options{ grid-template-columns:repeat(3,1fr); gap:var(--s4); } }
+  /* Three cards across need more room than the 1120 content width allows. */
+  @media (min-width:1040px){ .intro .wrap, .section .wrap, .band-card .wrap{ max-width:1280px; } }
 
   .opt{ display:flex; flex-direction:column; background:var(--card); border:1px solid var(--line);
     border-radius:var(--rad-xl); box-shadow:var(--sh-1); overflow:hidden;
@@ -49,6 +52,13 @@
   .opt-structure .n{ flex:none; width:1.3rem; font-weight:900; color:var(--tan); }
 
   .opt-foot{ margin-top:auto; padding:var(--s4) var(--s5) var(--s5); display:flex; flex-wrap:wrap; gap:var(--s2); }
+  /* Three across leaves less room, so the pair of buttons has to stay on one line. */
+  @media (min-width:1040px){
+    .opt-foot .btn{ padding:.85rem 1.2rem; font-size:.9375rem; }
+    /* Hold the intro blurbs to a common height so every card's "Best for"
+       row starts on the same line across the row. */
+    .opt-top .what{ min-height:6.6em; }
+  }
 
   /* Shared mechanics */
   .mech{ display:grid; gap:var(--s5); }
@@ -83,7 +93,7 @@
 <main>
   <section class="intro grain">
     <div class="wrap">
-      <h1>Four landing pages, four different conversion arguments.</h1>
+      <h1>Three landing pages, three different conversion arguments.</h1>
       <p class="lede measure">
         Each one takes the same event, the same brand and the same facts, and builds a different
         case for registering. They differ in structure and in the objection they are designed to
@@ -130,7 +140,7 @@
           </div>
           <div class="opt-foot">
             <a class="btn btn-primary" href="direct.html">Open option A</a>
-            <a class="btn btn-ghost" href="direct.html?s=givens">With Givens ad</a>
+            <a class="btn btn-ghost" href="direct.html?s=wilcox">With Wilcox ad</a>
           </div>
         </article>
 
@@ -175,43 +185,6 @@
         <article class="opt">
           <div class="opt-top">
             <p class="opt-letter">C</p>
-            <h2>Long-form story</h2>
-            <p class="what">
-              A narrative that builds the desire before it ever asks. Problem, agitation, turn,
-              offer, with the CTA repeated three times down the scroll.
-            </p>
-          </div>
-          <div class="opt-body">
-            <div class="opt-row">
-              <b>Best for</b>
-              <p>Low-awareness traffic. People who like the speaker's content but have never
-                 considered attending a conference about the Book of Mormon.</p>
-            </div>
-            <div class="opt-row">
-              <b>The objection it beats</b>
-              <p>Indifference. "Why would I care about this at all?"</p>
-            </div>
-            <div class="opt-row">
-              <b>Structure</b>
-              <ul class="opt-structure">
-                <li><span class="n">1</span><span>Headline hook, no hard sell</span></li>
-                <li><span class="n">2</span><span>Narrative in a real reading column</span></li>
-                <li><span class="n">3</span><span>Pull quotes that reset the eye</span></li>
-                <li><span class="n">4</span><span>Speakers as evidence, inline</span></li>
-                <li><span class="n">5</span><span>Four-question FAQ, then CTA band</span></li>
-              </ul>
-            </div>
-          </div>
-          <div class="opt-foot">
-            <a class="btn btn-primary" href="story.html">Open option C</a>
-            <a class="btn btn-ghost" href="story.html?s=wilcox">With Wilcox ad</a>
-          </div>
-        </article>
-
-        <!-- D -->
-        <article class="opt">
-          <div class="opt-top">
-            <p class="opt-letter">D</p>
             <h2>Value stack</h2>
             <p class="what">
               Itemizes everything the registration includes, line by line, then shows the price
@@ -240,7 +213,7 @@
             </div>
           </div>
           <div class="opt-foot">
-            <a class="btn btn-primary" href="offer.html">Open option D</a>
+            <a class="btn btn-primary" href="offer.html">Open option C</a>
             <a class="btn btn-ghost" href="offer.html?s=pelo">With Pelo ad</a>
           </div>
         </article>
@@ -253,7 +226,7 @@
   <section class="section band-card">
     <div class="wrap stack-5">
       <div class="measure">
-        <h2>What all four share</h2>
+        <h2>What all three share</h2>
         <p class="lede" style="margin-top:var(--s3)">
           The conversion mechanics are identical across every option, so a test between them
           is a test of the argument and nothing else.
@@ -295,7 +268,7 @@
         <h2>Try the speaker swap</h2>
         <p class="lede" style="margin-top:var(--s3)">
           These open option A as six different ad audiences would see it. The same parameter works
-          on all four pages.
+          on all three pages.
         </p>
       </div>
       <div class="testlinks">

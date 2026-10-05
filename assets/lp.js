@@ -33,9 +33,19 @@ var SPEAKERS = {
   var params = new URLSearchParams(window.location.search);
   var assetBase = document.documentElement.getAttribute('data-asset-base') || 'brand_assets/';
 
-  /* ---------- 1. Speaker message-match ---------- */
-  var key = (params.get('s') || params.get('speaker') || '').toLowerCase().trim();
-  var speaker = Object.prototype.hasOwnProperty.call(SPEAKERS, key) ? SPEAKERS[key] : null;
+  /* ---------- 1. Speaker message-match ----------
+     Two separate questions. Which speaker does the page show, and did the
+     visitor actually arrive from that speaker's ad? A page can carry a default
+     speaker (data-default-speaker) so it is never generic, but the
+     "you followed X here" copy must only appear for a real ad click. */
+  var has = function (k) { return !!k && Object.prototype.hasOwnProperty.call(SPEAKERS, k); };
+
+  var urlKey = (params.get('s') || params.get('speaker') || '').toLowerCase().trim();
+  var defKey = (document.documentElement.getAttribute('data-default-speaker') || '').toLowerCase().trim();
+
+  var fromAd = has(urlKey);
+  var key = fromAd ? urlKey : (has(defKey) ? defKey : '');
+  var speaker = key ? SPEAKERS[key] : null;
 
   if (speaker) {
     document.querySelectorAll('[data-sp="name"]').forEach(function (el) { el.textContent = speaker.name; });
@@ -44,11 +54,15 @@ var SPEAKERS = {
       el.src = assetBase + 'speakers/' + speaker.img;
       el.alt = speaker.name;
     });
-    /* Blocks that only make sense once we know who sent them. */
+    /* Whoever is in the hero must not also appear in the lineup grid below,
+       default speaker included. */
+    document.querySelectorAll('[data-lineup="' + key + '"]').forEach(function (el) { el.hidden = true; });
+  }
+
+  /* Only a real ad click earns the "you followed X here" copy. */
+  if (fromAd) {
     document.querySelectorAll('[data-sp-only]').forEach(function (el) { el.hidden = false; });
     document.querySelectorAll('[data-sp-none]').forEach(function (el) { el.hidden = true; });
-    /* Hide the speaker's own portrait from the lineup grid: they are already in the hero. */
-    document.querySelectorAll('[data-lineup="' + key + '"]').forEach(function (el) { el.hidden = true; });
   }
 
   /* ---------- 2. Urgency ---------- */
@@ -95,7 +109,7 @@ var SPEAKERS = {
   var carry = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid','ttclid'];
   var pass = new URLSearchParams();
   carry.forEach(function (k) { if (params.get(k)) pass.set(k, params.get(k)); });
-  if (key) pass.set('utm_content', pass.get('utm_content') || key);
+  if (fromAd) pass.set('utm_content', pass.get('utm_content') || key);
 
   var qs = pass.toString();
   document.querySelectorAll('[data-register]').forEach(function (el) {
